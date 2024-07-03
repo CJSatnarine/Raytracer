@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/cjsatnarine/Code/Raytracer/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o -c /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp",
+  "file": "/home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp",
+  "output": "CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o"
+}
+]
