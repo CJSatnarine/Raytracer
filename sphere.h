@@ -6,15 +6,28 @@
 
 class sphere : public hittable {
     private:
-        point3 centre;
+        point3 centre1;
         double radius;
         shared_ptr<material> mat;
+        bool isMoving;
+        vec3 centreVec;
+
+        point3 sphereCentre(double time) const {
+            // Linearly interpolate from centre1 to centre2 accoedingf to time, where t=0 yields centre1 and t=1 yields centre2. 
+            return centre1 + time * centreVec;
+        }
 
     public: 
-        sphere(const point3& centre, double radius, shared_ptr<material> mat)
-        : centre(centre), radius(fmax(0,radius)), mat(mat) {}
+        // Stationary sphere. 
+        sphere(const point3& centre, double radius, shared_ptr<material> mat) : centre1(centre), radius(fmax(0, radius)), mat(mat), isMoving(false) {}
+
+        // Moving sphere. 
+        sphere(const point3& centre1, const point3& centre2, double radius, shared_ptr<material> mat) : centre1(centre1), radius(fmax(0, radius)), mat(mat), isMoving(true) {
+            centreVec = centre2 - centre1;
+        }
 
         bool hit(const ray& r, interval rayT, hitRecord& rec) const override {
+            point3 centre = isMoving ? sphereCentre(r.time()) : centre1;
             vec3 oc = centre - r.origin();
             auto a = r.direction().lengthSquared();
             auto h = dot(r.direction(), oc);

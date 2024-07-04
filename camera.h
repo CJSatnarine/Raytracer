@@ -99,8 +99,8 @@ class camera {
 
             auto rayOrigin = (defocusAngle <= 0) ? centre : defocusDiskSample();
             auto rayDirection = pixelSample - rayOrigin;
-
-            return ray(rayOrigin, rayDirection);
+            auto rayTime = randomDouble();
+            return ray(rayOrigin, rayDirection, rayTime);
         }
 
         vec3 sampleSquare() const {
