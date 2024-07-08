@@ -5,10 +5,14 @@
 #include "hittableList.h"
 #include "material.h"
 #include "sphere.h"
+#include "texture.h"
 
 int main(void) {
     // World. 
     hittableList world;
+
+    auto checker = make_shared<checkerTexture>(0.32, colour(.2, .3, .1), colour(.9, .9, .9));
+    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
 
     // Code from the book. 
     auto ground_material = make_shared<lambertian>(colour(0.5, 0.5, 0.5));
