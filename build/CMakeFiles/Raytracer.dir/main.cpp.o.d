@@ -1,7 +1,7 @@
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o: \
- /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp \
- /usr/include/stdc-predef.h /home/cjsatnarine/Code/Raytracer/rayTracer.h \
- /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/Raytracer.dir/main.cpp.o: \
+ /home/cjsatnarine/Code/Raytracer/main.cpp /usr/include/stdc-predef.h \
+ /home/cjsatnarine/Code/Raytracer/rayTracer.h /usr/include/c++/13/cmath \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

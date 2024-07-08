@@ -69,28 +69,28 @@ include CMakeFiles/Raytracer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Raytracer.dir/flags.make
 
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o: CMakeFiles/Raytracer.dir/flags.make
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o: /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o: CMakeFiles/Raytracer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cjsatnarine/Code/Raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o -MF CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o.d -o CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o -c /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp
+CMakeFiles/Raytracer.dir/main.cpp.o: CMakeFiles/Raytracer.dir/flags.make
+CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp
+CMakeFiles/Raytracer.dir/main.cpp.o: CMakeFiles/Raytracer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cjsatnarine/Code/Raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Raytracer.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Raytracer.dir/main.cpp.o -MF CMakeFiles/Raytracer.dir/main.cpp.o.d -o CMakeFiles/Raytracer.dir/main.cpp.o -c /home/cjsatnarine/Code/Raytracer/main.cpp
 
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Raytracer.dir/ImageGenerator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp > CMakeFiles/Raytracer.dir/ImageGenerator.cpp.i
+CMakeFiles/Raytracer.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Raytracer.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cjsatnarine/Code/Raytracer/main.cpp > CMakeFiles/Raytracer.dir/main.cpp.i
 
-CMakeFiles/Raytracer.dir/ImageGenerator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Raytracer.dir/ImageGenerator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp -o CMakeFiles/Raytracer.dir/ImageGenerator.cpp.s
+CMakeFiles/Raytracer.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Raytracer.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cjsatnarine/Code/Raytracer/main.cpp -o CMakeFiles/Raytracer.dir/main.cpp.s
 
 # Object files for target Raytracer
 Raytracer_OBJECTS = \
-"CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o"
+"CMakeFiles/Raytracer.dir/main.cpp.o"
 
 # External object files for target Raytracer
 Raytracer_EXTERNAL_OBJECTS =
 
-Raytracer: CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o
+Raytracer: CMakeFiles/Raytracer.dir/main.cpp.o
 Raytracer: CMakeFiles/Raytracer.dir/build.make
 Raytracer: CMakeFiles/Raytracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cjsatnarine/Code/Raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Raytracer"

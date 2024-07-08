@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o -o Raytracer 
+/usr/bin/c++ -g CMakeFiles/Raytracer.dir/main.cpp.o -o Raytracer 

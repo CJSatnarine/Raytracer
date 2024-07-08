@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/cjsatnarine/Code/Raytracer/ImageGenerator.cpp" "CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o" "gcc" "CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o.d"
+  "/home/cjsatnarine/Code/Raytracer/main.cpp" "CMakeFiles/Raytracer.dir/main.cpp.o" "gcc" "CMakeFiles/Raytracer.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

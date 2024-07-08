@@ -2,6 +2,7 @@
 #define MATERIAL_H
 
 #include "rayTracer.h"
+#include "texture.h"
 
 class hitRecord;
 
@@ -16,20 +17,20 @@ class material {
 
 class lambertian : public material {
   private:
-    colour albedo;
+    shared_ptr<texture> tex;
 
   public:
-    lambertian(const colour& albedo) : albedo(albedo) {}
+    lambertian(const colour& albedo) : tex(make_shared<solidColour>(albedo)) {}
+    lambertian(shared_ptr<texture> tex) : tex(tex) {}
 
-    bool scatter(const ray& rIn, const hitRecord& rec, colour& attenuation, ray& scattered)
-    const override {
+    bool scatter(const ray& rIn, const hitRecord& rec, colour& attenuation, ray& scattered) const override {
         auto scatterDirection = rec.normal + randomUnitVector();
 
         // Catch degenerate scatter direction. 
         if (scatterDirection.nearZero()) scatterDirection = rec.normal;
 
         scattered = ray(rec.p, scatterDirection, rIn.time());
-        attenuation = albedo;
+        attenuation = tex->value(rec.u, rec.v, rec.p);
         return true;
     }
 };

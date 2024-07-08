@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(Raytracer VERSION 0.1.0 LANGUAGES C CXX)
 
 add_executable(Raytracer 
-    ImageGenerator.cpp
+    main.cpp
     aabb.h
     bvh.h
     camera.h
@@ -14,6 +14,7 @@ add_executable(Raytracer
     ray.h
     rayTracer.h
     sphere.h
+    texture.h
     vec3.h
 )
 

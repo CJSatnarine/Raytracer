@@ -7,12 +7,9 @@
 #include "sphere.h"
 #include "texture.h"
 
-int main(void) {
+void bouncingSpheres(void) {
     // World. 
     hittableList world;
-
-    auto checker = make_shared<checkerTexture>(0.32, colour(.2, .3, .1), colour(.9, .9, .9));
-    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(checker)));
 
     // Code from the book. 
     auto ground_material = make_shared<lambertian>(colour(0.5, 0.5, 0.5));
@@ -76,6 +73,41 @@ int main(void) {
     cam.focusDistance = 10;
 
     cam.render(world);
+}
+
+void checkeredSpheres(void) {
+    hittableList world;
+
+    auto checker = make_shared<checkerTexture>(0.32, colour(.9, .1, .1), colour(.9, .9, .9));
+
+    world.add(make_shared<sphere>(point3(0,-10, 0), 10, make_shared<lambertian>(checker)));
+    world.add(make_shared<sphere>(point3(0, 10, 0), 10, make_shared<lambertian>(checker)));
     
-    return 0;
+    camera cam;
+
+    cam.aspectRatio = 16.0 / 9.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 100;
+    cam.maxDepth = 50;
+
+    cam.vFieldOfView = 20;
+    cam.lookFrom = point3(13, 2, 3);
+    cam.lookAt = point3(0, 0, 0);
+    cam.vUp = vec3(0, 1, 0);
+
+    cam.defocusAngle = 0;
+    cam.render(world);
+}
+
+int main(void) {
+    int sceneToShow = 2;
+
+    switch (sceneToShow) {
+        case 1: 
+            bouncingSpheres();
+            break;
+        case 2:
+            checkeredSpheres();
+            break;
+    }
 }

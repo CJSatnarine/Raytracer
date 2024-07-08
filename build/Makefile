@@ -129,29 +129,29 @@ Raytracer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/build
 .PHONY : Raytracer/fast
 
-ImageGenerator.o: ImageGenerator.cpp.o
-.PHONY : ImageGenerator.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-ImageGenerator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o
-.PHONY : ImageGenerator.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-ImageGenerator.i: ImageGenerator.cpp.i
-.PHONY : ImageGenerator.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-ImageGenerator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/ImageGenerator.cpp.i
-.PHONY : ImageGenerator.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-ImageGenerator.s: ImageGenerator.cpp.s
-.PHONY : ImageGenerator.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-ImageGenerator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/ImageGenerator.cpp.s
-.PHONY : ImageGenerator.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Raytracer.dir/build.make CMakeFiles/Raytracer.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Raytracer"
-	@echo "... ImageGenerator.o"
-	@echo "... ImageGenerator.i"
-	@echo "... ImageGenerator.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
