@@ -40,6 +40,11 @@ inline double randomDouble(double min, double max) {
     return min + (max - min) * randomDouble();
 }
 
+inline int randomInt(int min, int max) {
+    // Returns a random integer in [min, max].
+    return int(randomDouble(min, max++));
+}
+
 // Common headers. 
 #include "colour.h"
 #include "interval.h"

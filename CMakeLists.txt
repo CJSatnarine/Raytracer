@@ -3,6 +3,8 @@ project(Raytracer VERSION 0.1.0 LANGUAGES C CXX)
 
 add_executable(Raytracer 
     ImageGenerator.cpp
+    aabb.h
+    bvh.h
     camera.h
     colour.h
     hittable.h

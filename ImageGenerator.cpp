@@ -1,4 +1,5 @@
 #include "rayTracer.h"
+#include "bvh.h"
 #include "camera.h"
 #include "hittable.h"
 #include "hittableList.h"
@@ -8,18 +9,6 @@
 int main(void) {
     // World. 
     hittableList world;
-
-    // auto groundMaterial = make_shared<lambertian>(colour(0.1, 0.0, 0.0));
-    // auto centreMaterial = make_shared<lambertian>(colour(0.1, 0.2, 0.5));
-    // auto leftMaterial   = make_shared<dielectric>(1.50);
-    // auto bubbleMaterial = make_shared<dielectric>(1.00 / 1.50);
-    // auto rightMaterial  = make_shared<metal>(colour(1.0, 0.0, 0.0), 1.0);
-
-    // world.add(make_shared<sphere>(point3( 0.0, -100.5, -1.0), 100.0, groundMaterial));
-    // world.add(make_shared<sphere>(point3( 0.0,    0.0, -1.2),   0.5, centreMaterial));
-    // world.add(make_shared<sphere>(point3(-1.0,    0.0, -1.0),   0.5, leftMaterial));
-    // world.add(make_shared<sphere>(point3(-1.0,    0.0, -1.0),   0.4, bubbleMaterial));
-    // world.add(make_shared<sphere>(point3( 1.0,    0.0, -1.0),   0.5, rightMaterial));
 
     // Code from the book. 
     auto ground_material = make_shared<lambertian>(colour(0.5, 0.5, 0.5));
@@ -64,6 +53,8 @@ int main(void) {
 
     auto material3 = make_shared<metal>(colour(0.7, 0.6, 0.5), 0.0);
     world.add(make_shared<sphere>(point3(4, 1, 0), 1.0, material3));
+
+    world = hittableList(make_shared<bvh_node>(world));
 
     // Camera. 
     camera cam;

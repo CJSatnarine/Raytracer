@@ -195,11 +195,18 @@ CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o: \
  /home/cjsatnarine/Code/Raytracer/interval.h \
  /home/cjsatnarine/Code/Raytracer/vec3.h \
  /home/cjsatnarine/Code/Raytracer/ray.h \
- /home/cjsatnarine/Code/Raytracer/camera.h \
+ /home/cjsatnarine/Code/Raytracer/bvh.h \
+ /home/cjsatnarine/Code/Raytracer/aabb.h /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /home/cjsatnarine/Code/Raytracer/hittable.h \
- /home/cjsatnarine/Code/Raytracer/material.h \
  /home/cjsatnarine/Code/Raytracer/hittableList.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
+ /home/cjsatnarine/Code/Raytracer/camera.h \
+ /home/cjsatnarine/Code/Raytracer/material.h \
  /home/cjsatnarine/Code/Raytracer/sphere.h
