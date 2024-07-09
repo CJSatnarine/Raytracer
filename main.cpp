@@ -121,8 +121,30 @@ void earth(void) {
     cam.render(hittableList(globe));
 }
 
+void funny() {
+    auto texture = make_shared<imageTexture>("face.png");
+    auto surface = make_shared<lambertian>(texture);
+    auto object = make_shared<sphere>(point3(0, 0, 0), 2, surface);
+
+    camera cam;
+
+    cam.aspectRatio = 16.0 / 9.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 100;
+    cam.maxDepth = 50;
+
+    cam.vFieldOfView = 20;
+    cam.lookFrom = point3(0,0,12);
+    cam.lookAt = point3(0,0,0);
+    cam.vUp = vec3(0,1,0);
+
+    cam.defocusAngle = 0;
+
+    cam.render(hittableList(object));
+}
+
 int main(void) {
-    int sceneToShow = 3;
+    int sceneToShow = 4;
 
     switch (sceneToShow) {
         case 1: 
@@ -133,6 +155,9 @@ int main(void) {
             break;
         case 3:
             earth();
+            break;
+        case 4:
+            funny();
             break;
     }
 }
