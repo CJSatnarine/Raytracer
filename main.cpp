@@ -146,7 +146,7 @@ void funny() {
 void perlinSpheres() {
     hittableList world;
 
-    auto perlinTexture = make_shared<noiseTexture>();
+    auto perlinTexture = make_shared<noiseTexture>(4);
     world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(perlinTexture)));
     world.add(make_shared<sphere>(point3(0,2,0), 2, make_shared<lambertian>(perlinTexture)));
 
