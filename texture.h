@@ -2,6 +2,7 @@
 #define TEXTURE_H
 
 #include "rayTracer.h"
+#include "rtw_stb_image.h"
 
 class texture {
     public: 
@@ -45,6 +46,30 @@ class checkerTexture : public texture {
         double invScale;
         shared_ptr<texture> even;
         shared_ptr<texture> odd;
+};
+
+class imageTexture : public texture {
+    public:
+        imageTexture(const char* filename) : image(filename) {}
+
+        colour value(double u, double v, const point3& p) const override {
+            // If no texture deta, then return solid cyan. 
+            if (image.height() <= 0) return colour(0, 1, 1);
+
+            // Clamp input texture coordinates to [0, 1] x [1, 0]. 
+            u = interval(0, 1).clamp(u);
+            v = 1.0 - interval(0,1).clamp(v); // Flip v to image coordinates. 
+
+            auto i = int(u * image.width());
+            auto j = int(v * image.height());
+            auto pixel = image.pixelData(i, j);
+
+            auto colourScale = 1.0 / 255.0;
+            return colour(colourScale * pixel[0], colourScale * pixel[1], colourScale * pixel[2]);
+        }
+
+    private:
+        rtwImage image;
 };
 
 #endif

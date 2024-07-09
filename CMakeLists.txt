@@ -13,6 +13,7 @@ add_executable(Raytracer
     material.h
     ray.h
     rayTracer.h
+    rtw_stb_image.h
     sphere.h
     texture.h
     vec3.h
