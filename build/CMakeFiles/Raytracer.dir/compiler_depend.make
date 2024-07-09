@@ -11,6 +11,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
   /home/cjsatnarine/Code/Raytracer/hittableList.h \
   /home/cjsatnarine/Code/Raytracer/interval.h \
   /home/cjsatnarine/Code/Raytracer/material.h \
+  /home/cjsatnarine/Code/Raytracer/perlin.h \
   /home/cjsatnarine/Code/Raytracer/ray.h \
   /home/cjsatnarine/Code/Raytracer/rayTracer.h \
   /home/cjsatnarine/Code/Raytracer/rtw_stb_image.h \
@@ -273,12 +274,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
-/usr/include/c++/13/pstl/execution_defs.h:
-
-/usr/include/c++/13/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
 /usr/include/c++/13/math.h:
 
 /usr/include/c++/13/bits/ostream_insert.h:
@@ -417,8 +412,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/c++/13/cwctype:
 
-/home/cjsatnarine/Code/Raytracer/camera.h:
-
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/13/bits/algorithmfwd.h:
@@ -426,6 +419,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/c++/13/ios:
+
+/home/cjsatnarine/Code/Raytracer/camera.h:
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
@@ -438,6 +433,10 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/c++/13/algorithm:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/c++/13/cwchar:
 
 /home/cjsatnarine/Code/Raytracer/interval.h:
 
@@ -475,6 +474,16 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /home/cjsatnarine/Code/Raytracer/colour.h:
 
+/usr/include/c++/13/bits/streambuf.tcc:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
 /usr/include/c++/13/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
@@ -501,6 +510,12 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/c++/13/pstl/execution_defs.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -526,16 +541,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/bits/basic_ios.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/c++/13/tr1/poly_laguerre.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/alloca.h:
 
@@ -576,6 +581,10 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/endian.h:
+
+/usr/include/stdint.h:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
@@ -661,10 +670,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/sched.h:
 
-/usr/include/endian.h:
-
-/usr/include/stdint.h:
-
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/stdio.h:
@@ -711,11 +716,9 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
-/usr/include/c++/13/cwchar:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/home/cjsatnarine/Code/Raytracer/perlin.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

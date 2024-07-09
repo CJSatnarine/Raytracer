@@ -1,6 +1,7 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
+#include "perlin.h"
 #include "rayTracer.h"
 #include "rtw_stb_image.h"
 
@@ -70,6 +71,18 @@ class imageTexture : public texture {
 
     private:
         rtwImage image;
+};
+
+class noiseTexture : public texture {
+  public:
+    noiseTexture() {}
+
+    colour value(double u, double v, const point3& p) const override {
+        return colour(1,1,1) * noise.noise(p);
+    }
+
+  private:
+    perlin noise;
 };
 
 #endif

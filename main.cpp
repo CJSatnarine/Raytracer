@@ -143,8 +143,32 @@ void funny() {
     cam.render(hittableList(object));
 }
 
+void perlinSpheres() {
+    hittableList world;
+
+    auto perlinTexture = make_shared<noiseTexture>();
+    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(perlinTexture)));
+    world.add(make_shared<sphere>(point3(0,2,0), 2, make_shared<lambertian>(perlinTexture)));
+
+    camera cam;
+
+    cam.aspectRatio = 16.0 / 9.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 100;
+    cam.maxDepth = 50;
+
+    cam.vFieldOfView = 20;
+    cam.lookFrom = point3(13,2,3);
+    cam.lookAt = point3(0,0,0);
+    cam.vUp = vec3(0,1,0);
+
+    cam.defocusAngle = 0;
+
+    cam.render(world);
+}
+
 int main(void) {
-    int sceneToShow = 4;
+    int sceneToShow = 5;
 
     switch (sceneToShow) {
         case 1: 
@@ -158,6 +182,9 @@ int main(void) {
             break;
         case 4:
             funny();
+            break;
+        case 5:
+            perlinSpheres();
             break;
     }
 }

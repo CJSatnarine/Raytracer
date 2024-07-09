@@ -11,6 +11,7 @@ add_executable(Raytracer
     hittableList.h
     interval.h
     material.h
+    perlin.h
     ray.h
     rayTracer.h
     rtw_stb_image.h
