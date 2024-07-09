@@ -99,8 +99,30 @@ void checkeredSpheres(void) {
     cam.render(world);
 }
 
+void earth(void) {
+    auto earthTexture = make_shared<imageTexture>("earthmap.jpg");
+    auto earthSurface = make_shared<lambertian>(earthTexture);
+    auto globe = make_shared<sphere>(point3(0, 0, 0), 2, earthSurface);
+
+    camera cam;
+
+    cam.aspectRatio = 16.0 / 9.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 100;
+    cam.maxDepth = 50;
+
+    cam.vFieldOfView = 20;
+    cam.lookFrom = point3(0,0,12);
+    cam.lookAt = point3(0,0,0);
+    cam.vUp = vec3(0,1,0);
+
+    cam.defocusAngle = 0;
+
+    cam.render(hittableList(globe));
+}
+
 int main(void) {
-    int sceneToShow = 2;
+    int sceneToShow = 3;
 
     switch (sceneToShow) {
         case 1: 
@@ -108,6 +130,9 @@ int main(void) {
             break;
         case 2:
             checkeredSpheres();
+            break;
+        case 3:
+            earth();
             break;
     }
 }

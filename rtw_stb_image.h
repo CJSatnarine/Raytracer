@@ -54,15 +54,21 @@ class rtwImage {
             STBI_FREE(fdata);
         }
 
-        bool load(const std::string& filename) {
-            auto n = bytesPerPixel;
-            fdata = stbi_loadf(filename.c_str(), &imageWidth, &imageHeight, &n, bytesPerPixel);
-            if (fdata == nullptr) return false;
+    bool load(const std::string& filename) {
+        // Loads the linear (gamma=1) image data from the given file name. Returns true if the
+        // load succeeded. The resulting data buffer contains the three [0.0, 1.0]
+        // floating-point values for the first pixel (red, then green, then blue). Pixels are
+        // contiguous, going left to right for the width of the image, followed by the next row
+        // below, for the full height of the image.
 
-            bytesPerScanline = imageWidth * bytesPerPixel;
-            convertToBytes();
-            return true;
-        }
+        auto n = bytesPerPixel; // Dummy out parameter: original components per pixel
+        fdata = stbi_loadf(filename.c_str(), &imageWidth, &imageHeight, &n, bytesPerPixel);
+        if (fdata == nullptr) return false;
+
+        bytesPerScanline = imageWidth * bytesPerPixel;
+        convertToBytes();
+        return true;
+    }
 
         int width() const {
             return (fdata == nullptr) ? 0 : imageWidth;
@@ -96,7 +102,7 @@ class rtwImage {
         static int clamp(int x, int low, int high) {
             // Return the value clamped to the range [low, high].
             if (x < low) return low;
-            if (x < high) return high;
+            if (x < high) return x;
             return high - 1;
         }
 

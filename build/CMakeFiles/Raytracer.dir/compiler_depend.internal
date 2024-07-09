@@ -7,18 +7,21 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /home/cjsatnarine/Code/Raytracer/bvh.h
  /home/cjsatnarine/Code/Raytracer/camera.h
  /home/cjsatnarine/Code/Raytracer/colour.h
+ /home/cjsatnarine/Code/Raytracer/external/stb_image.h
  /home/cjsatnarine/Code/Raytracer/hittable.h
  /home/cjsatnarine/Code/Raytracer/hittableList.h
  /home/cjsatnarine/Code/Raytracer/interval.h
  /home/cjsatnarine/Code/Raytracer/material.h
  /home/cjsatnarine/Code/Raytracer/ray.h
  /home/cjsatnarine/Code/Raytracer/rayTracer.h
+ /home/cjsatnarine/Code/Raytracer/rtw_stb_image.h
  /home/cjsatnarine/Code/Raytracer/sphere.h
  /home/cjsatnarine/Code/Raytracer/texture.h
  /home/cjsatnarine/Code/Raytracer/vec3.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
+ /usr/include/assert.h
  /usr/include/c++/13/algorithm
  /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
@@ -121,6 +124,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
  /usr/include/c++/13/limits
+ /usr/include/c++/13/math.h
  /usr/include/c++/13/memory
  /usr/include/c++/13/new
  /usr/include/c++/13/ostream
@@ -129,6 +133,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /usr/include/c++/13/pstl/glue_memory_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/stdexcept
+ /usr/include/c++/13/stdlib.h
  /usr/include/c++/13/streambuf
  /usr/include/c++/13/string
  /usr/include/c++/13/string_view
@@ -163,6 +168,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /usr/include/stdint.h
  /usr/include/stdio.h
  /usr/include/stdlib.h
+ /usr/include/string.h
+ /usr/include/strings.h
  /usr/include/time.h
  /usr/include/wchar.h
  /usr/include/wctype.h
