@@ -12,6 +12,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
   /home/cjsatnarine/Code/Raytracer/interval.h \
   /home/cjsatnarine/Code/Raytracer/material.h \
   /home/cjsatnarine/Code/Raytracer/perlin.h \
+  /home/cjsatnarine/Code/Raytracer/quad.h \
   /home/cjsatnarine/Code/Raytracer/ray.h \
   /home/cjsatnarine/Code/Raytracer/rayTracer.h \
   /home/cjsatnarine/Code/Raytracer/rtw_stb_image.h \
@@ -274,6 +275,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
 /usr/include/c++/13/math.h:
 
 /usr/include/c++/13/bits/ostream_insert.h:
@@ -301,10 +304,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /home/cjsatnarine/Code/Raytracer/sphere.h:
 
 /home/cjsatnarine/Code/Raytracer/rtw_stb_image.h:
-
-/usr/include/c++/13/ostream:
-
-/usr/include/c++/13/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/13/cmath:
 
@@ -380,12 +379,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
 
-/usr/include/c++/13/bits/stringfwd.h:
-
-/usr/include/c++/13/bits/shared_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/c++/13/bits/refwrap.h:
@@ -411,6 +404,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/c++/13/cwctype:
+
+/usr/include/c++/13/bits/move.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -460,6 +455,10 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /home/cjsatnarine/Code/Raytracer/bvh.h:
 
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
+/home/cjsatnarine/Code/Raytracer/vec3.h:
+
 /usr/include/assert.h:
 
 /usr/include/c++/13/backward/auto_ptr.h:
@@ -467,10 +466,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/tr1/gamma.tcc:
 
 /home/cjsatnarine/Code/Raytracer/external/stb_image.h:
-
-/home/cjsatnarine/Code/Raytracer/vec3.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
 
 /home/cjsatnarine/Code/Raytracer/colour.h:
 
@@ -494,6 +489,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /home/cjsatnarine/Code/Raytracer/aabb.h:
 
+/usr/include/c++/13/bits/stringfwd.h:
+
 /usr/include/c++/13/backward/binders.h:
 
 /home/cjsatnarine/Code/Raytracer/hittable.h:
@@ -501,6 +498,16 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/bits/alloc_traits.h:
 
 /usr/include/c++/13/bits/concept_check.h:
+
+/usr/include/c++/13/bits/shared_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/home/cjsatnarine/Code/Raytracer/quad.h:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/ext/aligned_buffer.h:
 
@@ -544,11 +551,13 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/alloca.h:
 
+/usr/include/c++/13/ostream:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/13/bits/move.h:
 
 /usr/include/c++/13/bits/localefwd.h:
 
@@ -565,10 +574,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/functional_hash.h:
 
@@ -789,5 +794,3 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:

@@ -4,6 +4,7 @@
 #include "hittable.h"
 #include "hittableList.h"
 #include "material.h"
+#include "quad.h"
 #include "sphere.h"
 #include "texture.h"
 
@@ -167,8 +168,41 @@ void perlinSpheres() {
     cam.render(world);
 }
 
+void quads() {
+    hittableList world;
+
+    // Materials. 
+    auto leftRed = make_shared<lambertian>(colour(1.0, 0.2, 0.2));
+    auto backGreen = make_shared<lambertian>(colour(0.2, 1.0, 0.2));
+    auto rightBlue = make_shared<lambertian>(colour(0.2, 0.2, 1.0));
+    auto upperOrange = make_shared<lambertian>(colour(1.0, 0.5, 0.0));
+    auto lowerTeal = make_shared<lambertian>(colour(0.2, 0.8, 0.8));
+
+    //Quads. 
+    world.add(make_shared<quad>(point3(-3,-2, 5), vec3(0, 0,-4), vec3(0, 4, 0), leftRed));
+    world.add(make_shared<quad>(point3(-2,-2, 0), vec3(4, 0, 0), vec3(0, 4, 0), backGreen));
+    world.add(make_shared<quad>(point3( 3,-2, 1), vec3(0, 0, 4), vec3(0, 4, 0), rightBlue));
+    world.add(make_shared<quad>(point3(-2, 3, 1), vec3(4, 0, 0), vec3(0, 0, 4), upperOrange));
+    world.add(make_shared<quad>(point3(-2,-3, 5), vec3(4, 0, 0), vec3(0, 0,-4), lowerTeal));
+
+    camera cam;
+
+    cam.aspectRatio = 1.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 100;
+    cam.maxDepth = 50;
+
+    cam.vFieldOfView = 80;
+    cam.lookFrom = point3(0, 0, 9);
+    cam.lookAt = point3(0, 0, 0);
+    cam.vUp = vec3(0, 1, 0);
+
+    cam.defocusAngle = 0;
+    cam.render(world);
+}
+
 int main(void) {
-    int sceneToShow = 5;
+    int sceneToShow = 6;
 
     switch (sceneToShow) {
         case 1: 
@@ -185,6 +219,9 @@ int main(void) {
             break;
         case 5:
             perlinSpheres();
+            break;
+        case 6:
+            quads();
             break;
     }
 }

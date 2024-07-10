@@ -13,6 +13,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /home/cjsatnarine/Code/Raytracer/interval.h
  /home/cjsatnarine/Code/Raytracer/material.h
  /home/cjsatnarine/Code/Raytracer/perlin.h
+ /home/cjsatnarine/Code/Raytracer/quad.h
  /home/cjsatnarine/Code/Raytracer/ray.h
  /home/cjsatnarine/Code/Raytracer/rayTracer.h
  /home/cjsatnarine/Code/Raytracer/rtw_stb_image.h

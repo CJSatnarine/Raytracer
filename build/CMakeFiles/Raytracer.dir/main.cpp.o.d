@@ -215,4 +215,5 @@ CMakeFiles/Raytracer.dir/main.cpp.o: \
  /home/cjsatnarine/Code/Raytracer/external/stb_image.h \
  /usr/include/c++/13/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/13/math.h /usr/include/assert.h \
+ /home/cjsatnarine/Code/Raytracer/quad.h \
  /home/cjsatnarine/Code/Raytracer/sphere.h
