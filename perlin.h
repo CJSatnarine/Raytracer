@@ -47,6 +47,20 @@ class perlin {
             return perlinInterpolation(c, u, v, w);
         }
 
+        double turbulance(const point3& p, int depth) const {
+            auto accum = 0.0;
+            auto temporaryP = p;
+            auto weight = 1.0;
+
+            for (int i = 0; i < depth; i++) {
+                accum += weight * noise(temporaryP);
+                weight *= 0.5;
+                temporaryP *= 2;
+            }
+
+            return fabs(accum);
+        }
+
     private: 
         static const int pointCount = 256;
         vec3* randVector;
