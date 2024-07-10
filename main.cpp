@@ -207,8 +207,36 @@ void quads() {
     cam.render(world);
 }
 
+void simpleLight() {
+    hittableList world;
+
+    auto perlinTexture = make_shared<noiseTexture>(4);
+    world.add(make_shared<sphere>(point3(0,-1000,0), 1000, make_shared<lambertian>(perlinTexture)));
+    world.add(make_shared<sphere>(point3(0,2,0), 2, make_shared<lambertian>(perlinTexture)));
+
+    auto diffusionLight = make_shared<diffuseLight>(colour(4,4,4));
+    world.add(make_shared<quad>(point3(3,1,-2), vec3(2,0,0), vec3(0,2,0), diffusionLight));
+
+    camera cam;
+
+    cam.aspectRatio = 16.0 / 9.0;
+    cam.imageWidth = 800;
+    cam.samplesPerPixel = 200;
+    cam.maxDepth = 50;
+    cam.background = colour(0,0,0);
+
+    cam.vFieldOfView = 20;
+    cam.lookFrom = point3(26,3,6);
+    cam.lookAt = point3(0,2,0);
+    cam.vUp = vec3(0,1,0);
+
+    cam.defocusAngle = 0;
+
+    cam.render(world);
+}
+
 int main(void) {
-    int sceneToShow = 6;
+    int sceneToShow = 7;
 
     switch (sceneToShow) {
         case 1: 
@@ -228,6 +256,9 @@ int main(void) {
             break;
         case 6:
             quads();
+            break;
+        case 7:
+            simpleLight();
             break;
     }
 }
