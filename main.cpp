@@ -215,6 +215,7 @@ void simpleLight() {
     world.add(make_shared<sphere>(point3(0,2,0), 2, make_shared<lambertian>(perlinTexture)));
 
     auto diffusionLight = make_shared<diffuseLight>(colour(4,4,4));
+    world.add(make_shared<sphere>(point3(0,7,0), 2, diffusionLight));
     world.add(make_shared<quad>(point3(3,1,-2), vec3(2,0,0), vec3(0,2,0), diffusionLight));
 
     camera cam;
