@@ -64,6 +64,7 @@ void bouncingSpheres(void) {
     cam.imageWidth = 400;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
     
     cam.vFieldOfView = 20;
     cam.lookFrom = point3(13,2,3);
@@ -90,6 +91,7 @@ void checkeredSpheres(void) {
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
 
     cam.vFieldOfView = 20;
     cam.lookFrom = point3(13, 2, 3);
@@ -111,6 +113,7 @@ void earth(void) {
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
 
     cam.vFieldOfView = 20;
     cam.lookFrom = point3(0,0,12);
@@ -133,6 +136,7 @@ void funny() {
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
 
     cam.vFieldOfView = 20;
     cam.lookFrom = point3(0,0,12);
@@ -157,6 +161,7 @@ void perlinSpheres() {
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
 
     cam.vFieldOfView = 20;
     cam.lookFrom = point3(13,2,3);
@@ -191,6 +196,7 @@ void quads() {
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
     cam.maxDepth = 50;
+    cam.background = colour(0.70, 0.80, 1.00);
 
     cam.vFieldOfView = 80;
     cam.lookFrom = point3(0, 0, 9);

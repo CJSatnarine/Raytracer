@@ -10,7 +10,8 @@ class camera {
         double aspectRatio = 1.0;   // Ratio of image width over height
         int imageWidth  = 100;      // Rendered image width in pixel count
         int samplesPerPixel = 10;   // Count of random samples for each pixel. 
-        int maxDepth = 10;          // Maximum number of ray bounces into the scene. 
+        int maxDepth = 10;          // Maximum number of ray bounces into the scene.
+        colour background;          // Scene background colour. 
 
         double vFieldOfView = 90;           // Vertical view angle (field of view)
         point3 lookFrom = point3(0, 0, 0);  // Point camera is looking from.  
@@ -120,23 +121,17 @@ class camera {
 
             hitRecord rec;
 
-            if (world.hit(r, interval(0.001, infinity), rec)) {
-                ray scattered;
-                colour attenuation;
+            // if hte ray hits nothing, return the background colour. 
+            if (!world.hit(r, interval(0.001, infinity), rec)) return background;
 
-                if (rec.mat->scatter(r, rec, attenuation, scattered)) {
-                    return attenuation * rayColour(scattered, depth - 1, world);
-                }
-                return colour(0, 0, 0);
-            }
+            ray scattered;
+            colour attenuation;
+            colour colourFromEmission = rec.mat->emitted(rec.u, rec.v, rec.p);
 
-            vec3 unitDirection = unitVector(r.direction());
-            auto a = 0.5 * (unitDirection.y() + 1.0);
-            // Blue sky. 
-            return (1.0-a) * colour(1.0, 1.0, 1.0) + a * colour(0.5, 0.7, 1.0);
+            if (!rec.mat->scatter(r, rec, attenuation, scattered)) return colourFromEmission;
 
-            // Red sky.
-            //return (1.0-a) * colour(0.56, 0.08, 0.08) + a * colour(0.1, 0.0, 0.0);
+            colour colourFromScatter = attenuation * rayColour(scattered, depth - 1, world);
+            return colourFromEmission + colourFromScatter;
         }
 };
 #endif
