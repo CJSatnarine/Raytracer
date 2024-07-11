@@ -236,8 +236,39 @@ void simpleLight() {
     cam.render(world);
 }
 
+void cornellBox() {
+    hittableList world;
+
+    auto red = make_shared<lambertian>(colour(0.65, 0.05, 0.05));
+    auto white = make_shared<lambertian>(colour(0.73, 0.73, 0.73));
+    auto green = make_shared<lambertian>(colour(0.12, 0.45, 0.15));
+    auto light = make_shared<diffuseLight>(colour(15, 15, 15));
+
+    world.add(make_shared<quad>(point3(555,0,0), vec3(0,555,0), vec3(0,0,555), green));
+    world.add(make_shared<quad>(point3(0,0,0), vec3(0,555,0), vec3(0,0,555), red));
+    world.add(make_shared<quad>(point3(343, 554, 332), vec3(-130,0,0), vec3(0,0,-105), light));
+    world.add(make_shared<quad>(point3(0,0,0), vec3(555,0,0), vec3(0,0,555), white));
+    world.add(make_shared<quad>(point3(555,555,555), vec3(-555,0,0), vec3(0,0,-555), white));
+    world.add(make_shared<quad>(point3(0,0,555), vec3(555,0,0), vec3(0,555,0), white));
+
+    camera cam;
+    cam.aspectRatio = 1.0;
+    cam.imageWidth = 600;
+    cam.samplesPerPixel = 200;
+    cam.maxDepth = 50;
+    cam.background = colour(0, 0, 0);
+
+    cam.vFieldOfView = 40;
+    cam.lookFrom = point3(278, 278, -800);
+    cam.lookAt = point3(278, 278, 0);
+    cam.vUp = vec3(0, 1, 0);
+
+    cam.defocusAngle = 0;
+    cam.render(world);
+}
+
 int main(void) {
-    int sceneToShow = 7;
+    int sceneToShow = 8;
 
     switch (sceneToShow) {
         case 1: 
@@ -260,6 +291,9 @@ int main(void) {
             break;
         case 7:
             simpleLight();
+            break;
+        case 8:
+            cornellBox();
             break;
     }
 }
