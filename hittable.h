@@ -36,4 +36,32 @@ class hittable {
     virtual aabb boundingBox() const = 0;
 };
 
+class translate : public hittable {
+    public:
+        translate(shared_ptr<hittable> object, const vec3& offset) : object(object), offset(offset) {}
+
+        bool hit(const ray& r, interval rayT, hitRecord& rec) const override {
+            // Move the ray backwards by the offset.
+            ray offsetR(r.origin() - offset, r.direction(), r.time());
+
+            // Determine whether an intersection exists along the offset ray (and if so, where)
+            if (!object->hit(offsetR, rayT, rec))
+                return false;
+
+            // Move the intersection point forwards by the offset
+            rec.p += offset;
+
+            return true;
+        }
+
+        aabb boundingBox() const override {
+            return bBox;
+        }
+
+    private: 
+        shared_ptr<hittable> object;
+        vec3 offset;
+        aabb bBox;
+};
+
 #endif
