@@ -7,6 +7,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o
  /home/cjsatnarine/Code/Raytracer/bvh.h
  /home/cjsatnarine/Code/Raytracer/camera.h
  /home/cjsatnarine/Code/Raytracer/colour.h
+ /home/cjsatnarine/Code/Raytracer/constantMedium.h
  /home/cjsatnarine/Code/Raytracer/external/stb_image.h
  /home/cjsatnarine/Code/Raytracer/hittable.h
  /home/cjsatnarine/Code/Raytracer/hittableList.h

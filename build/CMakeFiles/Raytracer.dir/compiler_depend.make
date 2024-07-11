@@ -6,6 +6,7 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
   /home/cjsatnarine/Code/Raytracer/bvh.h \
   /home/cjsatnarine/Code/Raytracer/camera.h \
   /home/cjsatnarine/Code/Raytracer/colour.h \
+  /home/cjsatnarine/Code/Raytracer/constantMedium.h \
   /home/cjsatnarine/Code/Raytracer/external/stb_image.h \
   /home/cjsatnarine/Code/Raytracer/hittable.h \
   /home/cjsatnarine/Code/Raytracer/hittableList.h \
@@ -277,6 +278,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
 /usr/include/c++/13/math.h:
 
 /usr/include/c++/13/bits/ostream_insert.h:
@@ -361,10 +364,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/13/new:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
 /usr/include/c++/13/bits/stl_heap.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
@@ -406,6 +405,8 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/cwctype:
 
 /usr/include/c++/13/bits/move.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -495,6 +496,10 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /home/cjsatnarine/Code/Raytracer/hittable.h:
 
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/usr/include/c++/13/new:
+
 /usr/include/c++/13/bits/alloc_traits.h:
 
 /usr/include/c++/13/bits/concept_check.h:
@@ -559,21 +564,19 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/13/typeinfo:
-
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
 
@@ -591,6 +594,10 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 
 /usr/include/stdint.h:
 
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/home/cjsatnarine/Code/Raytracer/constantMedium.h:
+
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
@@ -604,8 +611,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/c++/13/bits/shared_ptr_base.h:
 
 /usr/include/wchar.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/c++/13/exception:
 
@@ -690,8 +695,6 @@ CMakeFiles/Raytracer.dir/main.cpp.o: /home/cjsatnarine/Code/Raytracer/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 

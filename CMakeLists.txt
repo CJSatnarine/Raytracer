@@ -7,6 +7,7 @@ add_executable(Raytracer
     bvh.h
     camera.h
     colour.h
+    constantMedium.h;
     hittable.h
     hittableList.h
     interval.h

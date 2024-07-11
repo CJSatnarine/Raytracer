@@ -1,6 +1,7 @@
 #include "rayTracer.h"
 #include "bvh.h"
 #include "camera.h"
+#include "constantMedium.h"
 #include "hittable.h"
 #include "hittableList.h"
 #include "material.h"
@@ -279,8 +280,50 @@ void cornellBox() {
     cam.render(world);
 }
 
+void cornellSmoke() {
+    hittableList world;
+
+    auto red = make_shared<lambertian>(colour(0.65, 0.05, 0.05));
+    auto white = make_shared<lambertian>(colour(0.73, 0.73, 0.73));
+    auto green = make_shared<lambertian>(colour(0.12, 0.45, 0.15));
+    auto light = make_shared<diffuseLight>(colour(15, 15, 15));
+
+    world.add(make_shared<quad>(point3(555,0,0), vec3(0,555,0), vec3(0,0,555), green));
+    world.add(make_shared<quad>(point3(0,0,0), vec3(0,555,0), vec3(0,0,555), red));
+    world.add(make_shared<quad>(point3(113,554,127), vec3(330,0,0), vec3(0,0,305), light));
+    world.add(make_shared<quad>(point3(0,555,0), vec3(555,0,0), vec3(0,0,555), white));
+    world.add(make_shared<quad>(point3(0,0,0), vec3(555,0,0), vec3(0,0,555), white));
+    world.add(make_shared<quad>(point3(0,0,555), vec3(555,0,0), vec3(0,555,0), white));
+
+    shared_ptr<hittable> box1 = box(point3(0,0,0), point3(165,330,165), white);
+    box1 = make_shared<rotateY>(box1, 15);
+    box1 = make_shared<translate>(box1, vec3(265,0,295));
+
+    shared_ptr<hittable> box2 = box(point3(0,0,0), point3(165,165,165), white);
+    box2 = make_shared<rotateY>(box2, -18);
+    box2 = make_shared<translate>(box2, vec3(130,0,65));
+
+    world.add(make_shared<constantMedium>(box1, 0.01, colour(0,0,0)));
+    world.add(make_shared<constantMedium>(box2, 0.01, colour(1,1,1)));
+
+    camera cam;
+    cam.aspectRatio = 1.0;
+    cam.imageWidth = 600;
+    cam.samplesPerPixel = 200;
+    cam.maxDepth = 50;
+    cam.background = colour(0, 0, 0);
+
+    cam.vFieldOfView = 40;
+    cam.lookFrom = point3(278, 278, -800);
+    cam.lookAt = point3(278, 278, 0);
+    cam.vUp = vec3(0, 1, 0);
+
+    cam.defocusAngle = 0;
+    cam.render(world);
+}
+
 int main(void) {
-    int sceneToShow = 8;
+    int sceneToShow = 9;
 
     switch (sceneToShow) {
         case 1: 
@@ -306,6 +349,9 @@ int main(void) {
             break;
         case 8:
             cornellBox();
+            break;
+        case 9: 
+            cornellSmoke();
             break;
     }
 }
