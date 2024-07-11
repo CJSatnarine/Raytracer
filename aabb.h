@@ -82,4 +82,12 @@ class aabb {
 const aabb aabb::empty = aabb(interval::empty, interval::empty, interval::empty);
 const aabb aabb::universe = aabb(interval::universe, interval::universe, interval::universe);
 
+aabb operator+(const aabb& bBox, const vec3& offset) {
+    return aabb(bBox.x + offset.x(), bBox.y + offset.y(), bBox.z + offset.z());
+}
+
+aabb operator+(const vec3& offset, const aabb& bBox) {
+    return bBox + offset;
+}
+
 #endif
