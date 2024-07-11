@@ -131,6 +131,10 @@ class rotateY : public hittable {
             return true;
         }
 
+        aabb boundingBox() const override {
+            return bBox;
+        }
+
     private: 
         shared_ptr<hittable> object;
         double sinTheta;
