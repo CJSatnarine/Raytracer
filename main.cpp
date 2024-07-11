@@ -251,6 +251,10 @@ void cornellBox() {
     world.add(make_shared<quad>(point3(555,555,555), vec3(-555,0,0), vec3(0,0,-555), white));
     world.add(make_shared<quad>(point3(0,0,555), vec3(555,0,0), vec3(0,555,0), white));
 
+    // Boxes. 
+    world.add(box(point3(130, 0, 65), point3(295, 165, 230), white));
+    world.add(box(point3(265, 0, 295), point3(430, 330, 460), white));
+
     camera cam;
     cam.aspectRatio = 1.0;
     cam.imageWidth = 600;
