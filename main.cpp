@@ -127,26 +127,35 @@ void earth(void) {
 }
 
 void funny() {
-    auto texture = make_shared<imageTexture>("face.png");
-    auto surface = make_shared<lambertian>(texture);
-    auto object = make_shared<sphere>(point3(0, 0, 0), 2, surface);
+    int sphereXPos = 400;
+    int sphereYPos = 200;
+    int sphereZPos = 400;
+
+    int cameraXPos = 3500;
+    int cameraYPos = sphereYPos;
+    int cameraZPos = 1200;
+
+    hittableList world;
+
+    auto material = make_shared<lambertian>(make_shared<imageTexture>("face.png"));
+    world.add(make_shared<sphere>(point3(sphereXPos, sphereYPos, sphereZPos), 100, material));
 
     camera cam;
 
-    cam.aspectRatio = 16.0 / 9.0;
+    cam.aspectRatio = 1.0;
     cam.imageWidth = 800;
     cam.samplesPerPixel = 100;
-    cam.maxDepth = 50;
+    cam.maxDepth = 4;
     cam.background = colour(0.70, 0.80, 1.00);
 
-    cam.vFieldOfView = 20;
-    cam.lookFrom = point3(0,0,12);
-    cam.lookAt = point3(0,0,0);
+    cam.vFieldOfView = 40;
+    cam.lookFrom = point3(cameraXPos, cameraYPos, cameraZPos);
+    cam.lookAt = point3(sphereXPos, sphereYPos, sphereZPos);
     cam.vUp = vec3(0,1,0);
 
     cam.defocusAngle = 0;
 
-    cam.render(hittableList(object));
+    cam.render(world);
 }
 
 void perlinSpheres() {
@@ -398,7 +407,7 @@ void finalScene(int imageWidth, int samplesPerPixel, int maxDepth) {
 }
 
 int main(void) {
-    int sceneToShow = 11;
+    int sceneToShow = 4;
 
     switch (sceneToShow) {
         case 1: 
