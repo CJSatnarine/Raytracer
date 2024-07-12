@@ -283,10 +283,10 @@ void cornellBox() {
 void cornellSmoke() {
     hittableList world;
 
-    auto red = make_shared<lambertian>(colour(0.65, 0.05, 0.05));
-    auto white = make_shared<lambertian>(colour(0.73, 0.73, 0.73));
-    auto green = make_shared<lambertian>(colour(0.12, 0.45, 0.15));
-    auto light = make_shared<diffuseLight>(colour(15, 15, 15));
+    auto red   = make_shared<lambertian>(colour(.65, .05, .05));
+    auto white = make_shared<lambertian>(colour(.73, .73, .73));
+    auto green = make_shared<lambertian>(colour(.12, .45, .15));
+    auto light = make_shared<diffuseLight>(colour(7, 7, 7));
 
     world.add(make_shared<quad>(point3(555,0,0), vec3(0,555,0), vec3(0,0,555), green));
     world.add(make_shared<quad>(point3(0,0,0), vec3(0,555,0), vec3(0,0,555), red));
@@ -307,18 +307,20 @@ void cornellSmoke() {
     world.add(make_shared<constantMedium>(box2, 0.01, colour(1,1,1)));
 
     camera cam;
+
     cam.aspectRatio = 1.0;
     cam.imageWidth = 600;
     cam.samplesPerPixel = 200;
     cam.maxDepth = 50;
-    cam.background = colour(0, 0, 0);
+    cam.background = colour(0,0,0);
 
     cam.vFieldOfView = 40;
     cam.lookFrom = point3(278, 278, -800);
     cam.lookAt = point3(278, 278, 0);
-    cam.vUp = vec3(0, 1, 0);
+    cam.vUp = vec3(0,1,0);
 
     cam.defocusAngle = 0;
+
     cam.render(world);
 }
 
@@ -343,6 +345,8 @@ void finalScene(int imageWidth, int samplesPerPixel, int maxDepth) {
     }
 
     hittableList world;
+
+    world.add(make_shared<bvh_node>(boxes1));
 
     auto light = make_shared<diffuseLight>(colour(7, 7, 7));
     world.add(make_shared<quad>(point3(123, 554, 147), vec3(300, 0, 0), vec3(0, 0, 265), light));
@@ -394,7 +398,7 @@ void finalScene(int imageWidth, int samplesPerPixel, int maxDepth) {
 }
 
 int main(void) {
-    int sceneToShow = 9;
+    int sceneToShow = 11;
 
     switch (sceneToShow) {
         case 1: 
@@ -428,7 +432,7 @@ int main(void) {
             finalScene(800, 10000, 40);
             break;
         default: 
-            finalScene(400, 250, 4);
+            finalScene(400, 250, 40);
             break;
     }
 }
