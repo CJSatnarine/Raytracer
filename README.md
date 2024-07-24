@@ -31,6 +31,7 @@ And to run the build:
 `build\Release\Raytracer.exe > image.ppm`
 
 For **Mac** or **Linux**, run these commands to obptimise build for the fastest results:
+
 `cmake -B build/Release -DCMAKE_BUILD_TYPE=Release`
 
 `cmake --build build/Release`
