@@ -31,7 +31,7 @@ For **Windows**, run this command to optimised build:
 And to run the build:
 - `build\Release\Raytracer.exe > image.ppm`
 
-For **Mac** or **Linux**, run these commands to obptimise build for the fastest results:
+For **Mac** or **Linux**, run these commands to optimise build for the fastest results:
 
 - `cmake -B build/Release -DCMAKE_BUILD_TYPE=Release`
 
@@ -44,7 +44,7 @@ You'll need an image viewer to view the PPM file. I used [feh](https://feh.final
 
 # :scroll: To Do
 A list of things I wish to implement: 
-- [ ] Triangles
+- [ ] Triangle
 
 
 # :book: Resources Used
