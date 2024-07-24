@@ -1,3 +1,0 @@
-/home/cjsatnarine/Code/Raytracer/build/Release/CMakeFiles/Raytracer.dir
-/home/cjsatnarine/Code/Raytracer/build/Release/CMakeFiles/edit_cache.dir
-/home/cjsatnarine/Code/Raytracer/build/Release/CMakeFiles/rebuild_cache.dir

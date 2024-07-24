@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/Raytracer.dir/ImageGenerator.cpp.o -o Raytracer 
