@@ -5,6 +5,7 @@ The output of this programme is a [PPM file](https://en.wikipedia.org/wiki/Netpb
 
 # :camera_flash: Screenshots
 ![A screenshot of the bouncingSpheres.](/README_IMAGES/bouncingSpheres.png)
+![A screenshot of the finalRender that took 7+ hours to render.](/README_IMAGES/finalRender.png)
 ![A screenshot of the Cornell Box.](/README_IMAGES/cornellBox.png)
 
 
