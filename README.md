@@ -12,6 +12,7 @@ The output of this programme is a [PPM file](https://en.wikipedia.org/wiki/Netpb
 To run this code, you'll need to build it as it uses CMake. To build it, go to the root directory in the terminal and run the commands: 
 
 `cmake -B build`
+
 `cmake --build build`
 
 >The `cmake --build build` command should be run whenever a change is made to the `CMakeLists.txt` file in the build directory. 
@@ -31,6 +32,7 @@ And to run the build:
 
 For **Mac** or **Linux**, run these commands to obptimise build for the fastest results:
 `cmake -B build/Release -DCMAKE_BUILD_TYPE=Release`
+
 `cmake --build build/Release`
 
 And to run the build:
