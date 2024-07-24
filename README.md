@@ -4,8 +4,8 @@ This is a project where I learn how a raytracer works by building one. To accomp
 The output of this programme is a [PPM file](https://en.wikipedia.org/wiki/Netpbm#File_formats) that contains the rendered image. 
 
 # :camera_flash: Screenshots
-![A screenshot of the bouncingSpheres.](/README/bouncingSpheres.png)
-![A screenshot of the Cornell Box.](/README/cornellBox.png)
+![A screenshot of the bouncingSpheres.](/README_IMAGES/bouncingSpheres.png)
+![A screenshot of the Cornell Box.](/README_IMAGES/cornellBox.png)
 
 
 # :hammer_and_wrench: Building and Running the Code
