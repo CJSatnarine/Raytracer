@@ -94,9 +94,7 @@ class camera {
             // Construct a camera ray originating from the origin and directed at randomly sampled point around the pixel location i, j.
 
             auto offset = sampleSquare();
-            auto pixelSample = pixel00Location
-                            + ((i + offset.x()) * pixelDeltaU)
-                            + ((j + offset.y()) * pixelDeltaV);
+            auto pixelSample = pixel00Location + ((i + offset.x()) * pixelDeltaU) + ((j + offset.y()) * pixelDeltaV);
 
             auto rayOrigin = (defocusAngle <= 0) ? centre : defocusDiskSample();
             auto rayDirection = pixelSample - rayOrigin;

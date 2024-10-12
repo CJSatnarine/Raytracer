@@ -42,11 +42,6 @@ And to run the build:
 
 You'll need an image viewer to view the PPM file. I used [feh](https://feh.finalrewind.org/). 
 
-# :scroll: To Do
-A list of things I wish to implement: 
-- [ ] Triangle
-
-
 # :book: Resources Used
 [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 
