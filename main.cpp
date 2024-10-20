@@ -319,7 +319,7 @@ void cornellSmoke() {
 
     cam.aspectRatio = 1.0;
     cam.imageWidth = 600;
-    cam.samplesPerPixel = 200;
+    cam.samplesPerPixel = 600;
     cam.maxDepth = 50;
     cam.background = colour(0,0,0);
 
@@ -406,9 +406,7 @@ void finalScene(int imageWidth, int samplesPerPixel, int maxDepth) {
     cam.render(world);
 }
 
-int main(void) {
-    int sceneToShow = 4;
-
+void sceneChooser(int sceneToShow) {
     switch (sceneToShow) {
         case 1: 
             bouncingSpheres();
@@ -444,4 +442,10 @@ int main(void) {
             finalScene(400, 250, 40);
             break;
     }
+}
+
+int main(void) {
+
+    // Choose a scene to render. 
+    sceneChooser(1);
 }
